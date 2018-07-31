@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        #container{
+            height: 100%;
+            width: 30%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #nav{
+            width: 100%;
+            height: 96px;
+        }
+        #nav .header{
+            height: 48px;
+            padding: 24px;
+        }
+        #nav .header img,#nav .header div{
+            float: left;
+        }
+        #nav .header .nav-menu{
+            height: 43px;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+        #nav .header .logo{
+            width: 36px;
+        }
+        #nav .header a{
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px 5px;
+            letter-spacing: 1px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        #nav .header .menu{
+            margin-top: 7px;
+            margin-left: 90px;
+            cursor: pointer;
+        }
+        #entry{
+            width: 100%;
+            height: 100%;
+        }
+        #entry .text{
+            height: 25%;
+            width: 50%;
+            font-weight: 700;
+            font-size: 20px;
+            margin:  0  auto;
+        }
+        #entry .footer{
+            height: 5%;
+            width: 50%;
+            margin: 0 auto;
+        }
+        #entry .footer .landing,#entry .footer .register{
+            width: 50px;
+            height: 30px;
+            float: left;
+            border: 1px solid #10fdff;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        #entry .footer .landing{
+            margin-right: 20px;
+        }
+        #back{
+            width: 70%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        }
+        #back .imgs, #back img{
+            width: 100%;
+        }
+        #back .imgs-three{
+            width: 100%;
+            height: 227px;
+            display: flex;
+            padding: 24px 0;
+        }
+        #back .first,#back .second,#back .third{
+            flex-grow:1 ;
+            padding: 12px;
+        }
+        #back .first img:hover,#back .second img:hover,#back .third img:hover{
+            margin-top: -2px;
+            box-shadow: 2px 2px 2px #89919a;
+        }
+        @media (max-height: 200px) {
+            #entry .text{
+                margin: 30% 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <div class="header">
+                <img src="logo.svg" alt="" class="logo">
+                <div class="nav-menu">
+                    <a href="">门店</a><a href="">我的账户</a><a href="">菜单</a>
+                </div>
+                <img src="icon-hamburger.svg" alt="" class="menu">
+            </div>
+        </div>
+        <div id="entry">
+            <div class="text">
+                <span>心情惬意，来杯咖啡吧☕ </span>
+            </div>
+            <div class="footer">
+                <div class="landing">登录</div>
+                <div class="register">注册</div>
+            </div>
+        </div>
+    </div>
+    <div id="back">
+        <div class="imgs">
+            <img src="kv-bev.jpg" alt="">
+
+        </div>
+        <div class="imgs-three">
+            <div class="first"><img src="starbucks-tmall-0723-cn.jpg" alt=""></div>
+            <div class="second"><img src="starbucks-design-studio-web-china.jpg" alt=""></div>
+            <div class="third"><img src="homepage-career-cn.jpg" alt=""></div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
