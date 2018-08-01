@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .small{
+            margin-left: 500px;
+            width: 700px;
+            overflow: hidden;
+        }
+        .big{
+            width: 2800px;
+            height: 525px;
+        }
+        .big img{
+            width: 700px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="small">
+        <div class="big">
+            <img src="img1.jpg" alt=""><img src="img2.jpg" alt=""><img src="img3.jpg" alt=""><img src="img1.jpg" alt="">
+        </div>
+    </div>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            var clientW = 700;
+            var indexNow = 1;
+            var speed = 1500;
+            var play = function () {
+                if (indexNow==4) {
+                    indexNow=1;
+                    $('.big').css({
+                        transition:'none',//取消效果
+                        transform:'translateX(0px)'
+                    })
+                    speed = 0;
+                }else{
+                    $('.big').css({
+                        transition:'transform .8s ease',
+                        transform:'translateX('+(-700 * indexNow)+'px)'//记得+引号，字符串
+                    })
+                    console.log(-700*indexNow)
+                        indexNow++;
+                    speed = 1500;
+                }
+                console.log(speed)
+                clearTimeout(timer);
+                timer = setTimeout(play,speed);
+            };
+            var timer = setTimeout(play,speed);
+        })
+
+
+    </script>
+</body>
+</html>

@@ -8,16 +8,23 @@
             margin: 0;
             padding: 0;
         }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
         html,body{
             width: 100%;
             height: 100%;
         }
         #container{
-            height: 100%;
+            /*height: 100%;*/
             width: 30%;
             position: fixed;
             top: 0;
             left: 0;
+            bottom: 0;
         }
         #nav{
             width: 100%;
@@ -26,14 +33,16 @@
         #nav .header{
             height: 48px;
             padding: 24px;
+            position: relative;
         }
-        #nav .header img,#nav .header div{
+        #nav .header ul{
+            display: inline;
+            position: absolute;
+            top: 29px;
+            left: 70px;
+        }
+        #nav .header li{
             float: left;
-        }
-        #nav .header .nav-menu{
-            height: 43px;
-            margin-top: 7px;
-            margin-left: 10px;
         }
         #nav .header .logo{
             width: 36px;
@@ -47,67 +56,188 @@
             cursor: pointer;
         }
         #nav .header .menu{
-            margin-top: 7px;
-            margin-left: 90px;
             cursor: pointer;
+            position: absolute;
+            top: 29px;
+            right: 24px;
         }
         #entry{
             width: 100%;
             height: 100%;
         }
+        #entry .body{
+            height: 200px;
+            width: 100%;
+            position: absolute;
+            bottom: 80px;
+        }
         #entry .text{
-            height: 25%;
+            height: 50%;
             width: 50%;
             font-weight: 700;
             font-size: 20px;
             margin:  0  auto;
         }
         #entry .footer{
-            height: 5%;
+            height: 50px;
             width: 50%;
             margin: 0 auto;
         }
-        #entry .footer .landing,#entry .footer .register{
+        #entry .footer .register{
             width: 50px;
             height: 30px;
             float: left;
-            border: 1px solid #10fdff;
+            border: 1px solid #1eb274;
+            color: #1eb274;
             border-radius: 10px;
             text-align: center;
             line-height: 30px;
             cursor: pointer;
         }
         #entry .footer .landing{
+            width: 70px;
+            height: 30px;
+            float: left;
+            line-height: 30px;
+            cursor: pointer;
+            text-align: center;
             margin-right: 20px;
+        }
+        #entry .footer .landing .landing-float{
+            float: left;
+            color: #1eb274;
         }
         #back{
             width: 70%;
-            height: 100%;
             position: absolute;
             right: 0;
             top: 0;
+            box-shadow: 1px 1px 1px 1px #e5e5e5;
 
         }
         #back .imgs, #back img{
             width: 100%;
+            cursor: pointer;
         }
         #back .imgs-three{
             width: 100%;
-            height: 227px;
+            /*height: 100%;*/
             display: flex;
             padding: 24px 0;
+            background: #f7f7f7;
         }
         #back .first,#back .second,#back .third{
             flex-grow:1 ;
-            padding: 12px;
+            margin: 0 0 0 24px;
+        }
+        #back .first img,#back .second img,#back .third img{
+            width: 100%;
         }
         #back .first img:hover,#back .second img:hover,#back .third img:hover{
-            margin-top: -2px;
-            box-shadow: 2px 2px 2px #89919a;
+            transition: transform 200ms linear;
+            transform: translateY(-5px);
+            box-shadow: 1px 1px 2px 2px #89919a;
         }
-        @media (max-height: 200px) {
+        #back .program-msr{
+            width: 100%;
+            height: 247px;
+        }
+        #back .program-msr .wrapper{
+            width: 720px;
+            height: 247px;
+            margin: 0 auto;
+            position: relative;
+            padding: 36px 0 36px 0;
+        }
+        #back .program-msr .wrapper img{
+            width: 283.5px;
+            position: absolute;
+            right: 0;
+            top: 123px;
+            margin-top: -36px;
+
+        }
+        #back .program-msr .wrapper h2{
+            width: 360px;
+            height: 30px;
+            margin-bottom: 18px;
+        }
+        #back .program-msr .wrapper p{
+            width: 350px;
+            height: 64px;
+            margin-bottom: 24px;
+            color: rgba(0,0,0,0.56);
+            font-size: 16px;
+        }
+        #back .program-msr .wrapper a{
+            color: #c2a661;
+        }
+        #back .program-msr .wrapper a::after{
+            content: ">";
+        }
+        #back .program-msr .wrapper .wrapper-content .button div{
+            width: 33px;
+            height: 25px;
+            border: 1px solid #1EB274;
+            color: #1EB274;
+            border-radius: 16px;
+            padding: 6px 18px 6px 18px;
+            float: left;
+            margin-right: 6px;
+        }
+        #back .tmall-center{
+            height: 341px;
+            padding: 36px 0 36px 0;
+            background:#f7f7f7 ;
+        }
+        @media (max-width: 1024px) {
+            #container{
+                width: 100%;
+                height: 183px;
+                position: static;
+            }
+            #nav .header .menu{
+                position: absolute;
+                right: 0;
+                top: 30px;
+                margin: 0;
+            }
+            #nav{
+                height: 80px;
+                padding-bottom: 0;
+            }
+            #back{
+                display: block;
+                width: 100%;
+                position: static;
+            }
+            #entry,#entry .body{
+                height: 103px;
+                padding: 0;
+                position: static;
+            }
             #entry .text{
-                margin: 30% 30%;
+                margin: 0;
+                padding-left: 24px;
+            }
+            #entry .footer{
+                margin: 0;
+                padding-left: 24px;
+            }
+            #nav .header ul{
+                width: 200px;
+                height: 31px;
+            }
+        }
+        @media  (max-width: 1070px){
+            #nav ul{
+                width: 170px;
+                height: 62px;
+            }
+        }
+        @media (max-height: 405px){
+            #entry .body{
+                position: static;
             }
         }
     </style>
@@ -117,20 +247,25 @@
         <div id="nav">
             <div class="header">
                 <img src="logo.svg" alt="" class="logo">
-                <div class="nav-menu">
-                    <a href="">门店</a><a href="">我的账户</a><a href="">菜单</a>
-                </div>
+                    <ul>
+                        <li><a href="">门店</a></li>
+                        <li><a href="">我的账户</a></li>
+                        <li><a href="">菜单</a></li>
+                    </ul>
                 <img src="icon-hamburger.svg" alt="" class="menu">
             </div>
         </div>
         <div id="entry">
-            <div class="text">
-                <span>心情惬意，来杯咖啡吧☕ </span>
+            <div class="body">
+                <div class="text">
+                    <span>心情惬意，来杯咖啡吧☕ </span>
+                </div>
+                <div class="footer">
+                    <div class="landing"><img src="icon-account.svg" alt="" class="landing-float"><div class="landing-float">登录</div></div>
+                    <div class="register">注册</div>
+                </div>
             </div>
-            <div class="footer">
-                <div class="landing">登录</div>
-                <div class="register">注册</div>
-            </div>
+
         </div>
     </div>
     <div id="back">
@@ -143,7 +278,24 @@
             <div class="second"><img src="starbucks-design-studio-web-china.jpg" alt=""></div>
             <div class="third"><img src="homepage-career-cn.jpg" alt=""></div>
         </div>
+        <div class="program-msr">
+            <div class="wrapper">
+                <div class="wrapper-content">
+                    <h2>星享俱乐部</h2>
+                    <p>开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。 <a href="">了解更多</a></p>
+                    <div class="button">
+                        <div>注册</div>
+                        <div>登录</div>
+                    </div>
+
+                </div>
+                <img src="logo-msr.svg" alt="">
+            </div>
+        </div>
+        <div class="tmall-center">
+        </div>
     </div>
+
 
 
 
